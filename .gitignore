@@ -24,3 +24,6 @@ hs_err_pid*
 rebel.xml
 *.iml
 correct.sh
+correct2.sh
+src/main/resources/config/jdbc.properties
+src/main/resources/config/redis_sentinel.properties
