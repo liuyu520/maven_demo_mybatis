@@ -2,7 +2,6 @@ package com.kunlunsoft.wxcp.conf.weixin;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -13,37 +12,37 @@ public class WxCpProperties {
     /**
      * 设置微信企业号的corpId
      */
-    @Value("${wechat.cp.corpId}")
+//    @Value("${wechat.cp.corpId}")
     private String corpId;
     /**
      * 第三方应用的SuiteID <br />
      * *  see https://open.work.weixin.qq.com/wwopen/developer#/sass/apps/detail/ww7ef07db8e157fc07
      */
-    @Value("${wechat.cp.thirdAppSuiteID}")
+//    @Value("${wechat.cp.thirdAppSuiteID}")
     private String thirdAppSuiteID;
 
     /**
      * 设置微信企业应用的AgentId
      */
-    @Value("${wechat.cp.agentId}")
+//    @Value("${wechat.cp.agentId}")
     private Integer agentId;
 
     /**
      * 设置微信企业应用的Secret
      */
-    @Value("${wechat.cp.secret}")
+//    @Value("${wechat.cp.secret}")
     private String secret;
 
     /**
      * 设置微信企业号的token
      */
-    @Value("${wechat.cp.token}")
+//    @Value("${wechat.cp.token}")
     private String token;
 
     /**
      * 设置微信企业号的EncodingAESKey
      */
-    @Value("${wechat.cp.aesKey}")
+//    @Value("${wechat.cp.aesKey}")
     private String aesKey;
 
     public String getCorpId() {
