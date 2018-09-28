@@ -23,6 +23,7 @@
 hs_err_pid*
 rebel.xml
 *.iml
+.idea
 correct.sh
 correct2.sh
 src/main/resources/config/jdbc.properties
