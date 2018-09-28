@@ -223,8 +223,8 @@
             <version>3.0.1</version> </dependency> -->
         <dependency>
             <groupId>yunmasoft.com</groupId>
-            <artifactId>oa_framework</artifactId>
-            <version>0.0.3.2-SNAPSHOT</version>
+            <artifactId>oa_framework_convention</artifactId>
+            <version>0.0.3.3-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.struts</groupId>

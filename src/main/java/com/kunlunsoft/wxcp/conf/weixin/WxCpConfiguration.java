@@ -3,6 +3,7 @@ package com.kunlunsoft.wxcp.conf.weixin;
 import com.kunlunsoft.wxcp.mp.aes.AesException;
 import com.kunlunsoft.wxcp.mp.aes.WXBizMsgCrypt;
 import com.kunlunsoft.wxcp.service.WxCpDecryptService;
+import com.string.widget.util.ValueWidget;
 import me.chanjar.weixin.cp.api.WxCpService;
 import me.chanjar.weixin.cp.config.WxCpConfigStorage;
 import me.chanjar.weixin.cp.config.WxCpInMemoryConfigStorage;
@@ -26,6 +27,9 @@ public class WxCpConfiguration {
     @Bean
     public WxCpConfigStorage configStorage() {
         WxCpInMemoryConfigStorage configStorage = new WxCpInMemoryConfigStorage();
+        if (ValueWidget.isNullOrEmpty(this.properties.getCorpId())) {
+            return configStorage;
+        }
         configStorage.setCorpId(this.properties.getCorpId().trim());
         configStorage.setAgentId(this.properties.getAgentId());
         configStorage.setCorpSecret(this.properties.getSecret());
