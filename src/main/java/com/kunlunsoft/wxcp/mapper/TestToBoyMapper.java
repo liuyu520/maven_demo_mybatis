@@ -1,5 +1,4 @@
 package com.kunlunsoft.wxcp.mapper;
-
 import com.kunlunsoft.wxcp.entity.TestToBoy;
 
 import java.util.List;
@@ -62,4 +61,8 @@ public interface TestToBoyMapper {
      * @mbg.generated Fri Sep 28 12:46:52 CST 2018
      */
     int updateByPrimaryKey(TestToBoy record);
+
+    List<TestToBoy> findByAll(TestToBoy testToBoy);
+
+
 }

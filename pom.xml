@@ -476,6 +476,7 @@
                     <target>${java.version}</target>
                     <compilerVersion>${java.version}</compilerVersion>
                     <encoding>UTF-8</encoding>
+                    <compilerArgument>-parameters</compilerArgument>
                 </configuration>
 
             </plugin>
