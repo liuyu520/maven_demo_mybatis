@@ -76,7 +76,7 @@
         <if test="id != null">
             where id = #{id,jdbcType=INTEGER}
         </if>
-
+        limit 10
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         <!--

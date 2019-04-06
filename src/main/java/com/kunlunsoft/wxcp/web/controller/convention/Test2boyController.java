@@ -30,8 +30,8 @@ public class Test2boyController {
     @ResponseBody
     @RequestMapping(value = "/query/json", produces = SystemHWUtil.RESPONSE_CONTENTTYPE_JSON_UTF)
     public String json2(Model model, HttpServletRequest request, HttpServletResponse response
-            , @RequestParam(required = false) String demo) {
-        List<TestToBoy> tTestToBoys = testToBoyMapper.find(null);
+            , @RequestParam(required = false) Integer testId) {
+        List<TestToBoy> tTestToBoys = testToBoyMapper.find(testId);
         return HWJacksonUtils.getJsonP(tTestToBoys);
     }
 }
