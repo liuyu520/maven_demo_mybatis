@@ -11,7 +11,7 @@
         <java.version>1.8</java.version>
         <tomcat.version>7.0.26</tomcat.version>
         <struts2.version>2.3.4.1</struts2.version>
-        <spring.version>4.1.1.RELEASE</spring.version>
+        <spring.version>5.1.4.RELEASE</spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.8.9</version>
+            <version>2.9.8</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
@@ -212,7 +212,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>4.2.4.RELEASE</version>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -224,7 +224,7 @@
         <dependency>
             <groupId>yunmasoft.com</groupId>
             <artifactId>oa_framework_convention</artifactId>
-            <version>0.0.3.3-SNAPSHOT</version>
+            <version>0.0.3.5-SNAPSHOT</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.struts</groupId>
@@ -343,17 +343,17 @@
             <version>2.53.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>yunmasoft.com</groupId>
-            <artifactId>oa_framework</artifactId>
-            <version>0.0.3.2-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.struts</groupId>
-                    <artifactId>struts2-core</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!-- <dependency>
+             <groupId>yunmasoft.com</groupId>
+             <artifactId>oa_framework</artifactId>
+             <version>0.0.3.2-SNAPSHOT</version>
+             <exclusions>
+                 <exclusion>
+                     <groupId>org.apache.struts</groupId>
+                     <artifactId>struts2-core</artifactId>
+                 </exclusion>
+             </exclusions>
+         </dependency>-->
 
         <dependency>
             <groupId>com.github.binarywang</groupId>
