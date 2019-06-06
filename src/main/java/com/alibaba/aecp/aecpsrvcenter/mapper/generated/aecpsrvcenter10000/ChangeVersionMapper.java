@@ -1,5 +1,7 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 
+import org.apache.ibatis.annotations.Param;
+
 import model.aecpsrvcenter10000.ChangeVersion;
 
 public interface ChangeVersionMapper {
@@ -50,4 +52,8 @@ public interface ChangeVersionMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(ChangeVersion record);
+
+    int updateisDeletedByChangeIdAndAppCode(@Param("updatedIsDeleted") String updatedIsDeleted, @Param("changeId") String changeId, @Param("appCode") String appCode);
+
+
 }

@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.AssociationVersionMgmt;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface AssociationVersionMgmtMapper {
     /**
@@ -50,4 +52,8 @@ public interface AssociationVersionMgmtMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(AssociationVersionMgmt record);
+
+    List<Long> selectVersionByEnvUuidAndisvAssociationUuid(@Param("envUuid") String envUuid, @Param("isvAssociationUuid") String isvAssociationUuid);
+
+
 }

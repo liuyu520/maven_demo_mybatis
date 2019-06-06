@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.EnvMgmt;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface EnvMgmtMapper {
     /**
@@ -50,4 +52,8 @@ public interface EnvMgmtMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(EnvMgmt record);
+
+    List<String> selectUuidByAppCodeAndChangeIdAndEnvLabel(@Param("appCode") String appCode, @Param("changeId") String changeId, @Param("envLabel") String envLabel);
+
+
 }

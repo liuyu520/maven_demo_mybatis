@@ -1,5 +1,7 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 
+import org.apache.ibatis.annotations.Param;
+
 import model.aecpsrvcenter10000.ExtensionPointMethodImpl;
 
 public interface ExtensionPointMethodImplMapper {
@@ -50,4 +52,10 @@ public interface ExtensionPointMethodImplMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(ExtensionPointMethodImpl record);
+
+    int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
+
+    int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatusAndClassUuid(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status, @Param("classUuid") String classUuid);
+
+
 }

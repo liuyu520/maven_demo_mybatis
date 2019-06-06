@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.ApiInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ApiInfoMapper {
     /**
@@ -50,4 +52,12 @@ public interface ApiInfoMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(ApiInfo record);
+
+    int updateisDeletedByappCodeAndUuid(@Param("updatedIsDeleted") String updatedIsDeleted, @Param("appCode") String appCode, @Param("uuid") String uuid);
+
+    List<Long> selectIdByName(@Param("name") String name);
+
+    List<ApiInfo> findByAppCodeAndName(@Param("appCode") String appCode, @Param("name") String name);
+
+
 }

@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.IsvAppSwitchInfo;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface IsvAppSwitchInfoMapper {
     /**
@@ -50,4 +52,8 @@ public interface IsvAppSwitchInfoMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(IsvAppSwitchInfo record);
+
+    List<String> selectPreviousMainAppCodeByIsvAppCodeAndIsDeleted(@Param("isvAppCode") String isvAppCode, @Param("isDeleted") String isDeleted);
+
+
 }

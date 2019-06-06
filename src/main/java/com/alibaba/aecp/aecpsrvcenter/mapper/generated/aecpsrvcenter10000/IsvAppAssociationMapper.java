@@ -1,5 +1,7 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 
+import org.apache.ibatis.annotations.Param;
+
 import model.aecpsrvcenter10000.IsvAppAssociation;
 
 public interface IsvAppAssociationMapper {
@@ -50,4 +52,9 @@ public interface IsvAppAssociationMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(IsvAppAssociation record);
+
+    int updatePrimaryRouteRuleCodeByIdAndUuid(@Param("updatedPrimaryRouteRuleCode") String updatedPrimaryRouteRuleCode, @Param("id") Long id, @Param("uuid") String uuid);
+
+
+
 }

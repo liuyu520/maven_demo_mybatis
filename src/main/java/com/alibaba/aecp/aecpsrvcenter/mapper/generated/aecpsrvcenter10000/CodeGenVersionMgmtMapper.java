@@ -1,5 +1,7 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 
+import org.apache.ibatis.annotations.Param;
+
 import model.aecpsrvcenter10000.CodeGenVersionMgmt;
 
 public interface CodeGenVersionMgmtMapper {
@@ -58,4 +60,8 @@ public interface CodeGenVersionMgmtMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(CodeGenVersionMgmt record);
+
+    int updateisDeletedByAppCodeAndDomainCode(@Param("updatedIsDeleted") String updatedIsDeleted, @Param("appCode") String appCode, @Param("domainCode") String domainCode);
+
+
 }

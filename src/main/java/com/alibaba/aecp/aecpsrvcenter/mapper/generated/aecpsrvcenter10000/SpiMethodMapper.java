@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.SpiMethod;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface SpiMethodMapper {
     /**
@@ -50,4 +52,12 @@ public interface SpiMethodMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(SpiMethod record);
+
+    int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
+
+    int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatusAndInterfaceUuid(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status, @Param("interfaceUuid") String interfaceUuid);
+
+    List<Long> selectIdByInterfaceUuidAndAppCode(@Param("interfaceUuid") String interfaceUuid, @Param("appCode") String appCode);
+
+
 }

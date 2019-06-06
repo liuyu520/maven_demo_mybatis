@@ -1,5 +1,7 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 
+import org.apache.ibatis.annotations.Param;
+
 import model.aecpsrvcenter10000.SecondaryRouteRule;
 
 public interface SecondaryRouteRuleMapper {
@@ -50,4 +52,11 @@ public interface SecondaryRouteRuleMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(SecondaryRouteRule record);
+
+    int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
+
+    int updatesecondaryRouteCodeByAppCodeAndEnvUuid(@Param("updatedSecondaryRouteCode") String updatedSecondaryRouteCode, @Param("appCode") String appCode, @Param("envUuid") String envUuid);
+
+
+
 }

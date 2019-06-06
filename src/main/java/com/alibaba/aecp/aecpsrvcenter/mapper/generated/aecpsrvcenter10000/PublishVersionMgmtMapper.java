@@ -1,6 +1,8 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
 import model.aecpsrvcenter10000.PublishVersionMgmt;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface PublishVersionMgmtMapper {
     /**
@@ -50,4 +52,8 @@ public interface PublishVersionMgmtMapper {
      * @mbg.generated Thu Jun 06 11:32:10 CST 2019
      */
     int updateByPrimaryKey(PublishVersionMgmt record);
+
+    List<PublishVersionMgmt> findByAppCodeAndUuidAndStatusAndVersion(@Param("appCode") String appCode, @Param("uuid") String uuid, @Param("status") String status, @Param("version") Long version);
+
+
 }
