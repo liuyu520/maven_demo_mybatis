@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.ApiInfo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ApiInfoMapper {
@@ -58,6 +59,9 @@ public interface ApiInfoMapper {
     List<Long> selectIdByName(@Param("name") String name);
 
     List<ApiInfo> findByAppCodeAndName(@Param("appCode") String appCode, @Param("name") String name);
+
+    List<ApiInfo> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("name") String name, @Param("uuid") String uuid, @Param("description") String description, @Param("protocolType") String protocolType, @Param("visibleRange") String visibleRange, @Param("version") String version, @Param("content") String content, @Param("appCode") String appCode, @Param("appDomainCode") String appDomainCode);
+
 
 
 }

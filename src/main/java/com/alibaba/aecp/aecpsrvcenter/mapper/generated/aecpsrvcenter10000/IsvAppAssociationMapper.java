@@ -1,8 +1,9 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
+import model.aecpsrvcenter10000.IsvAppAssociation;
 import org.apache.ibatis.annotations.Param;
 
-import model.aecpsrvcenter10000.IsvAppAssociation;
+import java.util.Date;
+import java.util.List;
 
 public interface IsvAppAssociationMapper {
     /**
@@ -54,6 +55,9 @@ public interface IsvAppAssociationMapper {
     int updateByPrimaryKey(IsvAppAssociation record);
 
     int updatePrimaryRouteRuleCodeByIdAndUuid(@Param("updatedPrimaryRouteRuleCode") String updatedPrimaryRouteRuleCode, @Param("id") Long id, @Param("uuid") String uuid);
+
+    List<IsvAppAssociation> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("isvAppUniqueId") String isvAppUniqueId, @Param("primaryRouteRuleCode") String primaryRouteRuleCode, @Param("status") String status, @Param("mainAppCode") String mainAppCode, @Param("isvAppCode") String isvAppCode, @Param("uuid") String uuid, @Param("description") String description, @Param("mainAppUniqueId") String mainAppUniqueId, @Param("extend") String extend);
+
 
 
 

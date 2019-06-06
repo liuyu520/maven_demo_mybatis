@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.EnvMgmt;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface EnvMgmtMapper {
@@ -54,6 +55,8 @@ public interface EnvMgmtMapper {
     int updateByPrimaryKey(EnvMgmt record);
 
     List<String> selectUuidByAppCodeAndChangeIdAndEnvLabel(@Param("appCode") String appCode, @Param("changeId") String changeId, @Param("envLabel") String envLabel);
+
+    List<EnvMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("changeId") String changeId, @Param("appCode") String appCode, @Param("envLabel") String envLabel, @Param("envDescription") String envDescription, @Param("uuid") String uuid, @Param("versionUuid") String versionUuid, @Param("status") String status, @Param("appExtensionType") String appExtensionType, @Param("extend") String extend, @Param("offReason") String offReason);
 
 
 }

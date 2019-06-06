@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.AssociationVersionMgmt;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface AssociationVersionMgmtMapper {
@@ -54,6 +55,8 @@ public interface AssociationVersionMgmtMapper {
     int updateByPrimaryKey(AssociationVersionMgmt record);
 
     List<Long> selectVersionByEnvUuidAndisvAssociationUuid(@Param("envUuid") String envUuid, @Param("isvAssociationUuid") String isvAssociationUuid);
+
+    List<AssociationVersionMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("publishTime") Date publishTime, @Param("status") String status, @Param("version") Long version, @Param("isvAssociationUuid") String isvAssociationUuid, @Param("envUuid") String envUuid, @Param("routeSchema") String routeSchema);
 
 
 }

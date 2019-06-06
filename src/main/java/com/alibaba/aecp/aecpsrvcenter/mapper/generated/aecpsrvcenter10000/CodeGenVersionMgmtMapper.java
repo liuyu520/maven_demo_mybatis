@@ -1,8 +1,9 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
+import model.aecpsrvcenter10000.CodeGenVersionMgmt;
 import org.apache.ibatis.annotations.Param;
 
-import model.aecpsrvcenter10000.CodeGenVersionMgmt;
+import java.util.Date;
+import java.util.List;
 
 public interface CodeGenVersionMgmtMapper {
     /**
@@ -62,6 +63,9 @@ public interface CodeGenVersionMgmtMapper {
     int updateByPrimaryKey(CodeGenVersionMgmt record);
 
     int updateisDeletedByAppCodeAndDomainCode(@Param("updatedIsDeleted") String updatedIsDeleted, @Param("appCode") String appCode, @Param("domainCode") String domainCode);
+
+    List<CodeGenVersionMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("version") Long version, @Param("publishTime") Date publishTime, @Param("appCode") String appCode, @Param("spiVersionSchema") String spiVersionSchema);
+
 
 
 }

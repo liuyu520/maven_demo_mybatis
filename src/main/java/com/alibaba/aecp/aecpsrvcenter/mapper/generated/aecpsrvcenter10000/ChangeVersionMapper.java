@@ -1,8 +1,9 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
+import model.aecpsrvcenter10000.ChangeVersion;
 import org.apache.ibatis.annotations.Param;
 
-import model.aecpsrvcenter10000.ChangeVersion;
+import java.util.Date;
+import java.util.List;
 
 public interface ChangeVersionMapper {
     /**
@@ -54,6 +55,8 @@ public interface ChangeVersionMapper {
     int updateByPrimaryKey(ChangeVersion record);
 
     int updateisDeletedByChangeIdAndAppCode(@Param("updatedIsDeleted") String updatedIsDeleted, @Param("changeId") String changeId, @Param("appCode") String appCode);
+
+    List<ChangeVersion> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("changeId") String changeId, @Param("appCode") String appCode, @Param("versionUuid") String versionUuid);
 
 
 }

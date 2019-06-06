@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.ExtensionPointInterface;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface ExtensionPointInterfaceMapper {
@@ -56,6 +57,8 @@ public interface ExtensionPointInterfaceMapper {
     int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
 
     List<Long> selectIdByInterfaceNameAndAppCode(@Param("interfaceName") String interfaceName, @Param("appCode") String appCode);
+
+    List<ExtensionPointInterface> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("interfaceName") String interfaceName, @Param("description") String description, @Param("name") String name, @Param("uuid") String uuid, @Param("version") Long version, @Param("appCode") String appCode, @Param("moduleCode") String moduleCode, @Param("changeId") String changeId, @Param("status") String status, @Param("envUuid") String envUuid);
 
 
 }

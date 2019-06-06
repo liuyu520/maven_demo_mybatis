@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.PublishVersionMgmt;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface PublishVersionMgmtMapper {
@@ -54,6 +55,8 @@ public interface PublishVersionMgmtMapper {
     int updateByPrimaryKey(PublishVersionMgmt record);
 
     List<PublishVersionMgmt> findByAppCodeAndUuidAndStatusAndVersion(@Param("appCode") String appCode, @Param("uuid") String uuid, @Param("status") String status, @Param("version") Long version);
+
+    List<PublishVersionMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("publishTime") Date publishTime, @Param("appCode") String appCode, @Param("status") String status, @Param("description") String description, @Param("version") Long version, @Param("uuid") String uuid);
 
 
 }

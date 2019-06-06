@@ -2,6 +2,7 @@ package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
 import model.aecpsrvcenter10000.IsvAppSwitchInfo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface IsvAppSwitchInfoMapper {
@@ -54,6 +55,8 @@ public interface IsvAppSwitchInfoMapper {
     int updateByPrimaryKey(IsvAppSwitchInfo record);
 
     List<String> selectPreviousMainAppCodeByIsvAppCodeAndIsDeleted(@Param("isvAppCode") String isvAppCode, @Param("isDeleted") String isDeleted);
+
+    List<IsvAppSwitchInfo> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("previousMainAppCode") String previousMainAppCode, @Param("isvAppCode") String isvAppCode, @Param("switchTime") String switchTime, @Param("extend") String extend);
 
 
 }

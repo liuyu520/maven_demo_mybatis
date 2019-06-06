@@ -1,8 +1,9 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
+import model.aecpsrvcenter10000.ExtensionPointMethodImpl;
 import org.apache.ibatis.annotations.Param;
 
-import model.aecpsrvcenter10000.ExtensionPointMethodImpl;
+import java.util.Date;
+import java.util.List;
 
 public interface ExtensionPointMethodImplMapper {
     /**
@@ -56,6 +57,9 @@ public interface ExtensionPointMethodImplMapper {
     int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
 
     int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatusAndClassUuid(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status, @Param("classUuid") String classUuid);
+
+    List<ExtensionPointMethodImpl> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("name") String name, @Param("moduleCode") String moduleCode, @Param("uuid") String uuid, @Param("version") Long version, @Param("appCode") String appCode, @Param("status") String status, @Param("mainAppCode") String mainAppCode, @Param("methodUuid") String methodUuid, @Param("secondaryRouteUuid") String secondaryRouteUuid, @Param("classUuid") String classUuid, @Param("changeId") String changeId, @Param("envUuid") String envUuid, @Param("isDefault") String isDefault, @Param("outParams") String outParams, @Param("inParams") String inParams, @Param("isInnerService") String isInnerService, @Param("extend") String extend, @Param("description") String description);
+
 
 
 }

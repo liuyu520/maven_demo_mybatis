@@ -1,8 +1,9 @@
 package com.alibaba.aecp.aecpsrvcenter.mapper.generated.aecpsrvcenter10000;
-
+import model.aecpsrvcenter10000.SecondaryRouteRule;
 import org.apache.ibatis.annotations.Param;
 
-import model.aecpsrvcenter10000.SecondaryRouteRule;
+import java.util.Date;
+import java.util.List;
 
 public interface SecondaryRouteRuleMapper {
     /**
@@ -56,6 +57,8 @@ public interface SecondaryRouteRuleMapper {
     int deleteByAppCodeAndEnvUuidAndIsDeletedAndStatus(@Param("appCode") String appCode, @Param("envUuid") String envUuid, @Param("isDeleted") String isDeleted, @Param("status") String status);
 
     int updatesecondaryRouteCodeByAppCodeAndEnvUuid(@Param("updatedSecondaryRouteCode") String updatedSecondaryRouteCode, @Param("appCode") String appCode, @Param("envUuid") String envUuid);
+
+    List<SecondaryRouteRule> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("secondaryRouteCode") String secondaryRouteCode, @Param("status") String status, @Param("uuid") String uuid, @Param("ruleType") String ruleType, @Param("version") Long version, @Param("appCode") String appCode, @Param("changeId") String changeId, @Param("envUuid") String envUuid, @Param("extend") String extend, @Param("executeRuleCode") String executeRuleCode, @Param("name") String name);
 
 
 
