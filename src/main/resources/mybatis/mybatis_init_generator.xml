@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <classPathEntry
-            location="/Users/whuanghkl/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar"/>
+            location="/Users/hanjun/.m2/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
 
     <context id="context" targetRuntime="MyBatis3Simple">
         <commentGenerator>
@@ -14,7 +14,7 @@
         </commentGenerator>
 
         <jdbcConnection userId="hw3" password="Y8CVZTCbjqRYG#" driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.57.78.161:3306/wx_cp_demo?characterEncoding=UTF-8"/>
+                        connectionURL="jdbc:mysql://123.57.78.161:3306/pua?characterEncoding=UTF-8"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -25,7 +25,7 @@
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis.mapperxml" targetProject=".">
+        <sqlMapGenerator targetPackage="mybatis.mapperxml.generated" targetProject=".">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
@@ -33,7 +33,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table catalog="wx_cp_demo" tableName="%" enableCountByExample="false" enableDeleteByExample="false"
+        <table catalog="pua" tableName="%" enableCountByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" enableUpdateByExample="false">
             <property name="useActualColumnNames" value="true"/>
         </table>

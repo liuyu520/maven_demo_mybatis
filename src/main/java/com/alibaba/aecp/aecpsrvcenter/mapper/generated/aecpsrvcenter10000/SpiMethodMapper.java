@@ -68,5 +68,10 @@ public interface SpiMethodMapper {
 
     Long countNameByAppCode(@Param("appCode") String appCode);
 
+    int updateChangeIdByChangeId(@Param("updatedChangeId") String updatedChangeId, @Param("changeId") String changeId);
+
+    int enableByInterfaceUuid(@Param("updatedStatus") String updatedStatus, @Param("updatedIsDeleted") String updatedIsDeleted, @Param("interfaceUuid") String interfaceUuid, @Param("uuid") String uuid);
+
+
 
 }

@@ -58,5 +58,7 @@ public interface AssociationVersionMgmtMapper {
 
     List<AssociationVersionMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("publishTime") Date publishTime, @Param("status") String status, @Param("version") Long version, @Param("isvAssociationUuid") String isvAssociationUuid, @Param("envUuid") String envUuid, @Param("routeSchema") String routeSchema);
 
+    int deleteByExcludedId(@Param("updatedStatus") String updatedStatus, Long id);
+
 
 }

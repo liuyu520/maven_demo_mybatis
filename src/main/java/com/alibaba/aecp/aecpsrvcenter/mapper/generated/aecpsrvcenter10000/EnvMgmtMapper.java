@@ -58,5 +58,8 @@ public interface EnvMgmtMapper {
 
     List<EnvMgmt> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("changeId") String changeId, @Param("appCode") String appCode, @Param("envLabel") String envLabel, @Param("envDescription") String envDescription, @Param("uuid") String uuid, @Param("versionUuid") String versionUuid, @Param("status") String status, @Param("appExtensionType") String appExtensionType, @Param("extend") String extend, @Param("offReason") String offReason);
 
+    int updateChangeIdByUuidAndAppCodeAndChangeId(@Param("updatedChangeId") String updatedChangeId, @Param("uuid") String uuid, @Param("appCode") String appCode, @Param("changeId") String changeId);
+
+
 
 }

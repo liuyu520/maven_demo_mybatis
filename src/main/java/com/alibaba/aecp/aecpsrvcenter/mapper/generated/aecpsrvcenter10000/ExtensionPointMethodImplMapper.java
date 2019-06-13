@@ -61,5 +61,14 @@ public interface ExtensionPointMethodImplMapper {
     List<ExtensionPointMethodImpl> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("name") String name, @Param("moduleCode") String moduleCode, @Param("uuid") String uuid, @Param("version") Long version, @Param("appCode") String appCode, @Param("status") String status, @Param("mainAppCode") String mainAppCode, @Param("methodUuid") String methodUuid, @Param("secondaryRouteUuid") String secondaryRouteUuid, @Param("classUuid") String classUuid, @Param("changeId") String changeId, @Param("envUuid") String envUuid, @Param("isDefault") String isDefault, @Param("outParams") String outParams, @Param("inParams") String inParams, @Param("isInnerService") String isInnerService, @Param("extend") String extend, @Param("description") String description);
 
 
+    int updateChangeIdByAppCodeAndChangeIdAndUuidAndEnvUuid(@Param("updatedChangeId") String updatedChangeId, @Param("appCode") String appCode, @Param("changeId") String changeId, @Param("uuid") String uuid, @Param("envUuid") String envUuid);
+
+    int updateChangeIdByChangeId(@Param("updatedChangeId") String updatedChangeId, @Param("changeId") String changeId);
+
+    int updateSecondaryRouteUuidByAppCode(@Param("updatedSecondaryRouteUuid") String updatedSecondaryRouteUuid, @Param("appCode") String appCode);
+
+    List<ExtensionPointMethodImpl> selectBySecondaryRouteUuid(@Param("secondaryRouteUuid") String secondaryRouteUuid, @Param("envUuid") String envUuid);
+
+
 
 }

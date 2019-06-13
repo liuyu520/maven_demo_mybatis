@@ -63,4 +63,9 @@ public interface ExtensionPointImplClassMapper {
     List<ExtensionPointImplClass> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("uuid") String uuid, @Param("version") Long version, @Param("description") String description, @Param("name") String name, @Param("implClassFullPath") String implClassFullPath, @Param("primaryRouteRuleCode") String primaryRouteRuleCode, @Param("appCode") String appCode, @Param("moduleCode") String moduleCode, @Param("mainAppCode") String mainAppCode, @Param("interfaceUuid") String interfaceUuid, @Param("changeId") String changeId, @Param("status") String status, @Param("envUuid") String envUuid);
 
 
+    int updateChangeIdByAppCodeAndChangeIdAndUuidAndEnvUuid(@Param("updatedChangeId") String updatedChangeId, @Param("appCode") String appCode, @Param("changeId") String changeId, @Param("uuid") String uuid, @Param("envUuid") String envUuid);
+
+    int updateChangeIdByChangeId(@Param("updatedChangeId") String updatedChangeId, @Param("changeId") String changeId);
+
+
 }

@@ -5,12 +5,12 @@
 
 <generatorConfiguration>
     <classPathEntry
-            location="/Users/whuanghkl/.m2/repository/mysql/mysql-connector-java/6.0.6/mysql-connector-java-6.0.6.jar"/>
+            location="/Users/hanjun/.m2/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
 
     <context id="Mybatis3Context" targetRuntime="MyBatis3">
         <property name="javaFileEncoding" value="UTF-8"/>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.57.78.161:3306/wx_cp_demo?characterEncoding=UTF-8"
+                        connectionURL="jdbc:mysql://123.57.78.161:3306/pua?characterEncoding=UTF-8"
                         userId="hw3"
                         password="Y8CVZTCbjqRYG#">
         </jdbcConnection>
@@ -20,22 +20,22 @@
         </javaTypeResolver>
 
         <javaModelGenerator targetPackage="com.kunlunsoft.wxcp.entity"
-                            targetProject="/Users/whuanghkl/code/mygit/weixin/corp_weixin_demo/src/main/java">
+                            targetProject="/Users/hanjun/Documents/mygit/mybatis/maven_demo_mybatis/src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis.mapperxml"
-                         targetProject="/Users/whuanghkl/code/mygit/weixin/corp_weixin_demo/src/main/resources">
+        <sqlMapGenerator targetPackage="mybatis.mapperxml.generated"
+                         targetProject="/Users/hanjun/Documents/mygit/mybatis/maven_demo_mybatis/src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.kunlunsoft.wxcp.mapper"
-                             targetProject="/Users/whuanghkl/code/mygit/weixin/corp_weixin_demo/src/main/java">
+                             targetProject="/Users/hanjun/Documents/mygit/mybatis/maven_demo_mybatis/src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table catalog="wx_cp_demo" tableName="%" enableCountByExample="false"
+        <table catalog="pua" tableName="%" enableCountByExample="false"
                enableDeleteByExample="false" enableUpdateByExample="false" enableSelectByExample="false">
         </table>
 

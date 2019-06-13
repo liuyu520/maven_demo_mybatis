@@ -60,6 +60,12 @@ public interface SecondaryRouteRuleMapper {
 
     List<SecondaryRouteRule> findByAll(@Param("id") Long id, @Param("gmtCreate") Date gmtCreate, @Param("gmtModified") Date gmtModified, @Param("domainCode") String domainCode, @Param("tenantId") Long tenantId, @Param("creator") String creator, @Param("modifier") String modifier, @Param("isDeleted") String isDeleted, @Param("mdcExt") String mdcExt, @Param("secondaryRouteCode") String secondaryRouteCode, @Param("status") String status, @Param("uuid") String uuid, @Param("ruleType") String ruleType, @Param("version") Long version, @Param("appCode") String appCode, @Param("changeId") String changeId, @Param("envUuid") String envUuid, @Param("extend") String extend, @Param("executeRuleCode") String executeRuleCode, @Param("name") String name);
 
+    int updateChangeIdByAppCodeAndChangeIdAndUuidAndEnvUuid(@Param("updatedChangeId") String updatedChangeId, @Param("appCode") String appCode, @Param("changeId") String changeId, @Param("uuid") String uuid, @Param("envUuid") String envUuid);
+
+    int updateChangeIdByChangeId(@Param("updatedChangeId") String updatedChangeId, @Param("changeId") String changeId);
+
+
+    int updateMainAppCodeAndmethodImplUuidByUuid(@Param("updatedMainAppCode") String updatedMainAppCode, @Param("updatedMethodImplUuid") String updatedMethodImplUuid, @Param("uuid") String uuid);
 
 
 }
