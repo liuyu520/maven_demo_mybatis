@@ -12,8 +12,8 @@
         <property name="javaFileEncoding" value="UTF-8"/>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://rm-tataecpsrvcenter10000.mysql.rdstest.tbsite.net:3306/aecpsrvcenter10000?useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;nullCatalogMeansCurrent=true"
-                        userId="aecpsrvcenter"
-                        password="aecpsrvcenter">
+                        userId=""
+                        password="">
         </jdbcConnection>
 
         <javaTypeResolver>
