@@ -11,8 +11,8 @@
         <property name="javaFileEncoding" value="UTF-8"/>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://123.57.78.161:3306/pua?useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;nullCatalogMeansCurrent=true"
-                        userId="hw3"
-                        password="Y8CVZTCbjqRYG#">
+                        userId=""
+                        password="">
         </jdbcConnection>
 
         <javaTypeResolver>
