@@ -38,7 +38,7 @@
         -->
         id, gmt_create, gmt_modified, domain_code, tenant_id, creator, modifier, is_deleted,
         mdc_ext, secondary_route_code, status, uuid, rule_type, version, app_code, change_id,
-        env_uuid, extend, execute_rule_code, name
+        env_uuid, extend, execute_rule_code, name, method_impl_uuid, main_app_code
     </sql>
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         <!--
@@ -72,14 +72,17 @@
         secondary_route_code, status, uuid,
         rule_type, version, app_code,
         change_id, env_uuid, extend,
-        execute_rule_code, name)
+        execute_rule_code, name, method_impl_uuid, main_app_code,
+        extend)
         values (#{id,jdbcType=BIGINT}, #{gmtCreate,jdbcType=TIMESTAMP}, #{gmtModified,jdbcType=TIMESTAMP},
         #{domainCode,jdbcType=VARCHAR}, #{tenantId,jdbcType=BIGINT}, #{creator,jdbcType=VARCHAR},
         #{modifier,jdbcType=VARCHAR}, #{isDeleted,jdbcType=CHAR}, #{mdcExt,jdbcType=VARCHAR},
         #{secondaryRouteCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{uuid,jdbcType=VARCHAR},
         #{ruleType,jdbcType=VARCHAR}, #{version,jdbcType=BIGINT}, #{appCode,jdbcType=VARCHAR},
         #{changeId,jdbcType=VARCHAR}, #{envUuid,jdbcType=VARCHAR}, #{extend,jdbcType=VARCHAR},
-        #{executeRuleCode,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR})
+        #{executeRuleCode,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{methodImplUuid,jdbcType=VARCHAR},
+        #{mainAppCode,jdbcType=VARCHAR},
+        #{extend,jdbcType=LONGVARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="model.aecpsrvcenter10000.SecondaryRouteRule">
         <!--
@@ -148,6 +151,15 @@
             </if>
             <if test="name != null">
                 name,
+            </if>
+            <if test="methodImplUuid != null">
+                method_impl_uuid,
+            </if>
+            <if test="mainAppCode != null">
+                main_app_code,
+            </if>
+            <if test="extend != null">
+                extend,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
