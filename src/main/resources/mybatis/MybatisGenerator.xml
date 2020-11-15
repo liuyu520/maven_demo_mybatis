@@ -10,7 +10,7 @@
     <context id="Mybatis3Context" targetRuntime="MyBatis3">
         <property name="javaFileEncoding" value="UTF-8"/>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://123.57.78.161:3306/pua?characterEncoding=UTF-8"
+                        connectionURL="jdbc:mysql://12.57.78.161:3306/dd?characterEncoding=UTF-8"
                         userId=""
                         password="">
         </jdbcConnection>
